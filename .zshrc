@@ -46,7 +46,7 @@ alias macos.lan='ssh -i /home/jkoshita/.ssh/macos.lan -L 5900:localhost:5900 jko
 alias jkoshita.duckdns.org='ssh -i /home/jkoshita/.ssh/jkoshita.duckdns.org -D 8080 jkoshita@jkoshita.duckdns.org'
 
 PS1='%K{blue}%n@debian%k %F{cyan}%1~%f $ '
-RPROMPT="%t"
+RPROMPT='%t'
 
 
 #
