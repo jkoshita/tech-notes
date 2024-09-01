@@ -14,6 +14,7 @@
         Add arguments (optional): -File C:\Users\jkoshita\Documents\update-firewall.ps1
 #>
 
+
 $userprofile = "jkoshita"
 $application_folder = Get-ChildItem -Attributes D -Path C:\Users\${userprofile}\AppData\Local\Discord\app-* -Name
 $old_application_folder_path = "C:\Users\${userprofile}\AppData\Local\Discord\old_application_folder"
