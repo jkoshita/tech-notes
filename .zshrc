@@ -45,9 +45,12 @@ alias macos.lan='ssh -i /home/jkoshita/.ssh/macos.lan jkoshita@macos.lan'
 alias jkoshita.duckdns.org='ssh -i /home/jkoshita/.ssh/jkoshita.duckdns.org -D 8080 jkoshita@jkoshita.duckdns.org'
 
 
+#
 # install zsh plugins
+#
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 # git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
 # git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh/zsh-completions
 # (on next login)
 # rm -f ~/.zcompdump; compinit
+#
