@@ -133,7 +133,7 @@ AllowUsers jkoshita
 #
 # openssh setup
 #
-# sudo apt install libpam-google-authenticator
+# sudo apt install openssh-server libpam-google-authenticator
 # sudo rm /etc/ssh/ssh_host_ec*_key*
 # sudo rm /etc/ssh/ssh_host_r*_key*
 # sudo ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519 -N "" < /dev/null
