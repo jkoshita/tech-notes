@@ -144,6 +144,7 @@ AllowUsers jkoshita
 # /etc/pam.d/sshd
 # - @include common-auth
 # + auth required pam_google_authenticator.so nullok
+# + auth required pam_permit.so
 #
 # google-authenticator
 # quick setup
