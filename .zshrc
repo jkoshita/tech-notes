@@ -41,7 +41,7 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fpath=(~/.zsh/zsh-completions/src $fpath)
 
-alias debian.lan='ssh -p 2222 -i /home/jkoshita/.ssh/debian.lan jkoshita@localhost'
+alias debian-1.lan='ssh -p 2222 -i /home/jkoshita/.ssh/debian-1.lan jkoshita@localhost'
 alias macos.lan='ssh -i /home/jkoshita/.ssh/macos.lan -L 14000:localhost:4000 jkoshita@macos.lan'
 alias jkoshita.duckdns.org='ssh -i /home/jkoshita/.ssh/jkoshita.duckdns.org -L 14000:localhost:4000 -D 8080 jkoshita@jkoshita.duckdns.org'
 
