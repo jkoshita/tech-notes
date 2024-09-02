@@ -42,8 +42,8 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fpath=(~/.zsh/zsh-completions/src $fpath)
 
 alias debian.lan='ssh -p 2222 -i /home/jkoshita/.ssh/debian.lan jkoshita@localhost'
-alias macos.lan='ssh -i /home/jkoshita/.ssh/macos.lan -L 5900:localhost:5900 jkoshita@macos.lan'
-alias jkoshita.duckdns.org='ssh -i /home/jkoshita/.ssh/jkoshita.duckdns.org -D 8080 jkoshita@jkoshita.duckdns.org'
+alias macos.lan='ssh -i /home/jkoshita/.ssh/macos.lan -L 14000:localhost:4000 jkoshita@macos.lan'
+alias jkoshita.duckdns.org='ssh -i /home/jkoshita/.ssh/jkoshita.duckdns.org -L 14000:localhost:4000 -D 8080 jkoshita@jkoshita.duckdns.org'
 
 PS1='%K{blue}%n@debian%k %F{cyan}%1~%f $ '
 RPROMPT='%t'
