@@ -166,7 +166,7 @@ AllowUsers jkoshita
 # cat ~/.ssh/nm-macos.lan.pub >> ~/.nx/config/authorized.crt
 # rm ~/.ssh/nm-macos.lan.pub
 #
-# windows: C:\Program files (x86)\NoMachine\etc\server.cfg
+# windows: /mnt/c/Program\ Files/NoMachine/etc/server.cfg
 # macos: /Applications/NoMachine.app/Contents/Frameworks/etc/server.cfg
 # + AcceptedAuthenticationMethods NX-private-key
 #
