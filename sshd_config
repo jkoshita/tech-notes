@@ -153,6 +153,6 @@ AllowUsers jkoshita
 #
 # nomachine setup
 #
-# ssh-keygen -t rsa -b 4096
+# ssh-keygen -t rsa -b 4096 -f ~/.ssh/nm-debian-1.lan -N ""
 # 
 #
