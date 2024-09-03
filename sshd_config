@@ -155,5 +155,7 @@ AllowUsers jkoshita
 # nomachine setup
 #
 # ssh-keygen -t rsa -b 4096 -f ~/.ssh/nm-debian-1.lan -N ""
-# 
+# touch /mnt/c/Users/jkoshita/.nx/config/authorized.crt
+# chmod 644 /mnt/c/Users/jkoshita/.nx/config/authorized.crt
+# cat .ssh/nm-debian-1.lan.pub >> /mnt/c/Users/jkoshita/.nx/config/authorized.crt
 #
