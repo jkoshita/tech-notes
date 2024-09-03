@@ -150,6 +150,9 @@ AllowUsers jkoshita
 # quick setup
 # y y y n y
 #
+#
 # nomachine setup
 #
 # ssh-keygen -t rsa -b 4096
+# 
+#
