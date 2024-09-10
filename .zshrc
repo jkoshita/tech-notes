@@ -41,10 +41,10 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fpath=(~/.zsh/zsh-completions/src $fpath)
 
-alias debian-2.lan='ssh -i /home/jkoshita/.ssh/debian-2.lan -L 14000:localhost:4000 jkoshita@windows-2.lan'
-alias macos.lan='ssh -i /home/jkoshita/.ssh/macos.lan -L 24000:localhost:4000 jkoshita@macos.lan'
 alias debian-1='ssh -i /home/jkoshita/.ssh/debian-1.lan -L 34000:localhost:4000 -D 8080 jkoshita@jkoshita.duckdns.org'
 alias debian-1_macos='ssh -i /home/jkoshita/.ssh/debian-1.lan -L 24000:localhost:24000 jkoshita@jkoshita.duckdns.org'
+alias debian-2.lan='ssh -i /home/jkoshita/.ssh/debian-2.lan -L 14000:localhost:4000 jkoshita@windows-2.lan'
+alias macos.lan='ssh -i /home/jkoshita/.ssh/macos.lan -L 24000:localhost:4000 jkoshita@macos.lan'
 
 PS1='%K{blue}%n@debian%k %F{cyan}%1~%f $ '
 RPROMPT='%t'
