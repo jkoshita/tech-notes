@@ -158,7 +158,7 @@ AllowUsers jkoshita
 # (macos skip to mac only section)
 # touch /mnt/c/Users/jkoshita/.nx/config/authorized.crt
 # chmod 644 /mnt/c/Users/jkoshita/.nx/config/authorized.crt
-# cat ~/.ssh/nm-jkoshita.duckdns.org.pub >> /mnt/c/Users/jkoshita/.nx/config/authorized.crt
+# cat ~/.ssh/nm-jkoshita.duckdns.org.pub > /mnt/c/Users/jkoshita/.nx/config/authorized.crt
 # rm ~/.ssh/nm-jkoshita.duckdns.org.pub
 # (mac only)
 # touch ~/.nx/config/authorized.crt
