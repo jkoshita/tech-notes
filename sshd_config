@@ -139,8 +139,8 @@ AllowUsers jkoshita
 # sudo ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519 -N ""
 # sudo rm /etc/ssh/ssh_host_ed25519.pub
 # ssh-keygen -t ed25519 -a 100 -f ~/.ssh/debian-1.lan
-# cat ~/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys
-# rm ~/.ssh/id_ed25519.pub
+# cat ~/.ssh/debian-1.pub > ~/.ssh/authorized_keys
+# rm ~/.ssh/debian-1.pub
 #
 # /etc/pam.d/sshd
 # - @include common-auth
