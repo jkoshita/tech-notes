@@ -154,12 +154,12 @@ AllowUsers jkoshita
 #
 # nomachine setup
 #
-# ssh-keygen -t rsa -b 4096 -f ~/.ssh/nm-jkoshita.duckdns.org -N ""
+# ssh-keygen -t rsa -b 4096 -f ~/.ssh/nm-debian-1.lan -N ""
 # (macos skip to mac only section)
 # touch /mnt/c/Users/jkoshita/.nx/config/authorized.crt
 # chmod 644 /mnt/c/Users/jkoshita/.nx/config/authorized.crt
-# cat ~/.ssh/nm-jkoshita.duckdns.org.pub > /mnt/c/Users/jkoshita/.nx/config/authorized.crt
-# rm ~/.ssh/nm-jkoshita.duckdns.org.pub
+# cat ~/.ssh/nm-debian-1.lan.pub > /mnt/c/Users/jkoshita/.nx/config/authorized.crt
+# rm ~/.ssh/nm-debian-1.lan.pub
 # (mac only)
 # touch ~/.nx/config/authorized.crt
 # chmod 600 ~/.nx/config/authorized.crt
