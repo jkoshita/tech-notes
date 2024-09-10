@@ -140,7 +140,6 @@ AllowUsers jkoshita
 # sudo rm /etc/ssh/ssh_host_ed25519.pub
 # ssh-keygen -t ed25519 -a 100 -f ~/.ssh/debian-1.lan
 # cat ~/.ssh/debian-1.lan.pub > ~/.ssh/authorized_keys
-# rm ~/.ssh/debian-1.lan.pub
 #
 # /etc/pam.d/sshd
 # - @include common-auth
@@ -156,15 +155,11 @@ AllowUsers jkoshita
 #
 # ssh-keygen -t rsa -b 4096 -f ~/.ssh/nm-debian-1.lan -N ""
 # (macos skip to mac only section)
-# touch /mnt/c/Users/jkoshita/.nx/config/authorized.crt
-# chmod 644 /mnt/c/Users/jkoshita/.nx/config/authorized.crt
 # cat ~/.ssh/nm-debian-1.lan.pub > /mnt/c/Users/jkoshita/.nx/config/authorized.crt
-# rm ~/.ssh/nm-debian-1.lan.pub
+# chmod 644 /mnt/c/Users/jkoshita/.nx/config/authorized.crt
 # (mac only)
-# touch ~/.nx/config/authorized.crt
-# chmod 600 ~/.nx/config/authorized.crt
 # cat ~/.ssh/nm-macos.lan.pub > ~/.nx/config/authorized.crt
-# rm ~/.ssh/nm-macos.lan.pub
+# chmod 600 ~/.nx/config/authorized.crt
 #
 # windows: /mnt/c/Program\ Files/NoMachine/etc/server.cfg
 # macos: /Applications/NoMachine.app/Contents/Frameworks/etc/server.cfg
