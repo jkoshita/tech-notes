@@ -163,7 +163,7 @@ AllowUsers jkoshita
 # (mac only)
 # touch ~/.nx/config/authorized.crt
 # chmod 600 ~/.nx/config/authorized.crt
-# cat ~/.ssh/nm-macos.lan.pub >> ~/.nx/config/authorized.crt
+# cat ~/.ssh/nm-macos.lan.pub > ~/.nx/config/authorized.crt
 # rm ~/.ssh/nm-macos.lan.pub
 #
 # windows: /mnt/c/Program\ Files/NoMachine/etc/server.cfg
