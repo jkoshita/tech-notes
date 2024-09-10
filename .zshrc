@@ -43,7 +43,7 @@ fpath=(~/.zsh/zsh-completions/src $fpath)
 
 alias debian-2.lan='ssh -i /home/jkoshita/.ssh/debian-2.lan -L 14000:localhost:4000 jkoshita@windows-2.lan'
 alias macos.lan='ssh -i /home/jkoshita/.ssh/macos.lan -L 24000:localhost:4000 jkoshita@macos.lan'
-alias jkoshita.duckdns.org='ssh -i /home/jkoshita/.ssh/jkoshita.duckdns.org jkoshita@jkoshita.duckdns.org'
+alias jkoshita.duckdns.org='ssh -i /home/jkoshita/.ssh/debian-1.lan jkoshita@jkoshita.duckdns.org'
 alias jkoshita.duckdns.org_proxy='ssh -i /home/jkoshita/.ssh/debian-1.lan -D 8080 jkoshita@jkoshita.duckdns.org'
 alias jkoshita.duckdns.org_debian-1='ssh -i /home/jkoshita/.ssh/debian-1.lan -L 34000:localhost:4000 -D 8080 jkoshita@jkoshita.duckdns.org'
 alias jkoshita.duckdns.org_macos='ssh -i /home/jkoshita/.ssh/debian-1.lan -L 24000:localhost:24000 jkoshita@jkoshita.duckdns.org'
