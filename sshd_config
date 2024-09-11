@@ -166,3 +166,13 @@ AllowUsers jkoshita
 # macos: /Applications/NoMachine.app/Contents/Frameworks/etc/server.cfg
 # + AcceptedAuthenticationMethods NX-private-key
 #
+#
+# openwrt setup
+# opkg update
+# opkg install vim luci-app-https-dns-proxy luci-app-adblock tcpdump
+# uci -q delete uhttpd.main.listen_http
+# uci -q delete uhttpd.main.listen_https
+# uci add_list uhttpd.main.listen_http="127.0.0.1:80"
+# uci commit uhttpd
+# /etc/init.d/uhttpd restart
+#
