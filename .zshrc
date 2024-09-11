@@ -40,6 +40,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fpath=(~/.zsh/zsh-completions/src $fpath)
+
 alias linksys.lan='ssh -i /home/jkoshita/.ssh/linksys.lan -L 8080:localhost:80 root@localhost'
 alias debian-1.lan='ssh -i /home/jkoshita/.ssh/debian-1.lan -L 34000:localhost:4000 -D 8080 jkoshita@jkoshita.duckdns.org'
 alias debian-1.lan_macos='ssh -i /home/jkoshita/.ssh/debian-1.lan -L 24000:localhost:24000 jkoshita@jkoshita.duckdns.org'
