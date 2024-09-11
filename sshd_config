@@ -168,6 +168,7 @@ AllowUsers jkoshita
 #
 #
 # openwrt setup
+#
 # opkg update
 # opkg install vim luci-app-https-dns-proxy luci-app-adblock tcpdump
 # uci -q delete uhttpd.main.listen_http
