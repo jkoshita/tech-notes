@@ -99,9 +99,9 @@ AllowUsers jkoshita
 #
 # nomachine setup
 #
-# ssh-keygen -t rsa -b 4096 -f ~/.ssh/nm-windows-1.lan -N ""
+# ssh-keygen -t rsa -b 4096 -f ~/.ssh/nm-windows-2.lan -N ""
 # (macos skip to mac only section)
-# cat ~/.ssh/nm-windows-1.lan.pub > /mnt/c/Users/jkoshita/.nx/config/authorized.crt
+# cat ~/.ssh/nm-windows-2.lan.pub > /mnt/c/Users/jkoshita/.nx/config/authorized.crt
 # chmod 644 /mnt/c/Users/jkoshita/.nx/config/authorized.crt
 # (mac only)
 # cat ~/.ssh/nm-macos.lan.pub > ~/.nx/config/authorized.crt
