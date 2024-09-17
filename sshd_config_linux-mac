@@ -152,21 +152,6 @@ AllowUsers jkoshita
 # y y y n y
 #
 #
-# nomachine setup
-#
-# ssh-keygen -t rsa -b 4096 -f ~/.ssh/nm-debian-1.lan -N ""
-# (macos skip to mac only section)
-# cat ~/.ssh/nm-debian-1.lan.pub > /mnt/c/Users/jkoshita/.nx/config/authorized.crt
-# chmod 644 /mnt/c/Users/jkoshita/.nx/config/authorized.crt
-# (mac only)
-# cat ~/.ssh/nm-macos.lan.pub > ~/.nx/config/authorized.crt
-# chmod 600 ~/.nx/config/authorized.crt
-#
-# windows: /mnt/c/Program\ Files/NoMachine/etc/server.cfg
-# macos: /Applications/NoMachine.app/Contents/Frameworks/etc/server.cfg
-# + AcceptedAuthenticationMethods NX-private-key
-#
-#
 # openwrt setup
 #
 # opkg update
