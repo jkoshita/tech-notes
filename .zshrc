@@ -1,8 +1,8 @@
 # Set up the prompt
 
-#autoload -Uz promptinit
-#promptinit
-#prompt adam1
+autoload -Uz promptinit
+promptinit
+prompt adam1
 
 setopt histignorealldups sharehistory
 
@@ -46,28 +46,6 @@ alias debian-1.lan='ssh -i /home/jkoshita/.ssh/debian-1.lan -L 34000:localhost:4
 alias debian-1.lan_macos='ssh -i /home/jkoshita/.ssh/debian-1.lan -L 24000:localhost:24000 jkoshita@jkoshita.duckdns.org'
 alias debian-2.lan='ssh -i /home/jkoshita/.ssh/debian-2.lan -L 14000:localhost:4000 jkoshita@windows-2.lan'
 alias macos.lan='ssh -i /home/jkoshita/.ssh/macos.lan -L 24000:localhost:4000 jkoshita@macos.lan'
-
-#
-# powershell aliases:
-#
-# Set-Alias -Name linksys.lan -Value C:\Users\jkoshita\.ssh\login\linksys.ps1
-# linksys.ps1: ssh -i /Users/jkoshita/.ssh/linksys.lan -L 18080:localhost:80 root@linksys.lan
-#
-# Set-Alias -Name windows-1.lan -Value C:\Users\jkoshita\.ssh\login\windows-1.ps1
-# windows-1.ps1: ssh -i /Users/jkoshita/.ssh/windows-1.lan -L 34000:localhost:4000 -D 8080 jkoshita@jkoshita.duckdns.org
-#
-# Set-Alias -Name windows-1.lan_macos -Value C:\Users\jkoshita\.ssh\login\windows-1.lan_macos.ps1
-# windows-1.lan_macos.ps1: ssh -i /Users/jkoshita/.ssh/windows-1.lan -L 24000:localhost:24000 jkoshita@jkoshita.duckdns.org
-#
-# Set-Alias -Name windows-2.lan -Value C:\Users\jkoshita\.ssh\login\windows-2.ps1
-# windows-2.ps1: ssh -i /Users/jkoshita/.ssh/windows-2.lan -L 14000:localhost:4000 jkoshita@windows-2.lan
-#
-# Set-Alias -Name macos.lan -Value C:\Users\jkoshita\.ssh\login\macos.ps1
-# macos.ps1: ssh -i /Users/jkoshita/.ssh/macos.lan -L 24000:localhost:4000 jkoshita@macos.lan
-#
-
-PS1='%K{blue}%n@debian%k %F{cyan}%1~%f $ '
-RPROMPT='%t'
 
 
 #
