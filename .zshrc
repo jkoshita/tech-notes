@@ -49,7 +49,21 @@ alias macos.lan='ssh -i /home/jkoshita/.ssh/macos.lan -L 24000:localhost:4000 jk
 
 #
 # powershell aliases:
-# Set-Alias -Name linksys.lan -Value ssh -i /home/jkoshita/.ssh/linksys.lan -L 18080:localhost:80 root@linksys.lan
+#
+# Set-Alias -Name linksys.lan -Value C:\Users\jkoshita\.ssh\login\linksys.ps1
+# linksys.ps1: ssh -i /Users/jkoshita/.ssh/linksys.lan -L 18080:localhost:80 root@linksys.lan
+#
+# Set-Alias -Name windows-1.lan -Value C:\Users\jkoshita\.ssh\login\windows-1.ps1
+# debian-1.ps1: ssh -i /Users/jkoshita/.ssh/windows-1.lan -L 34000:localhost:4000 -D 8080 jkoshita@jkoshita.duckdns.org
+#
+# Set-Alias -Name windows-1.lan_macos -Value C:\Users\jkoshita\.ssh\login\windows-1.lan_macos.ps1
+# debian-1.lan_macos.ps1: ssh -i /Users/jkoshita/.ssh/windows-1.lan -L 24000:localhost:24000 jkoshita@jkoshita.duckdns.org
+#
+# Set-Alias -Name windows-2.lan -Value C:\Users\jkoshita\.ssh\login\debian-2.ps1
+# debian-2.ps1: ssh -i /Users/jkoshita/.ssh/windows-2.lan -L 14000:localhost:4000 jkoshita@windows-2.lan
+#
+# Set-Alias -Name macos.lan -Value C:\Users\jkoshita\.ssh\login\macos.ps1
+# macos.ps1: ssh -i /Users/jkoshita/.ssh/macos.lan -L 24000:localhost:4000 jkoshita@macos.lan
 #
 
 PS1='%K{blue}%n@debian%k %F{cyan}%1~%f $ '
