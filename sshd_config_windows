@@ -96,3 +96,18 @@ AllowUsers jkoshita
 #
 # New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Program Files\PowerShell\7\pwsh.exe" -PropertyType String -Force
 #
+#
+# nomachine setup
+#
+# ssh-keygen -t rsa -b 4096 -f ~/.ssh/nm-windows-1.lan -N ""
+# (macos skip to mac only section)
+# cat ~/.ssh/nm-windows-1.lan.pub > /mnt/c/Users/jkoshita/.nx/config/authorized.crt
+# chmod 644 /mnt/c/Users/jkoshita/.nx/config/authorized.crt
+# (mac only)
+# cat ~/.ssh/nm-macos.lan.pub > ~/.nx/config/authorized.crt
+# chmod 600 ~/.nx/config/authorized.crt
+#
+# windows: /mnt/c/Program\ Files/NoMachine/etc/server.cfg
+# macos: /Applications/NoMachine.app/Contents/Frameworks/etc/server.cfg
+# + AcceptedAuthenticationMethods NX-private-key
+#
