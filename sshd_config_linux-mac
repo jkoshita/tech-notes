@@ -156,7 +156,7 @@ AllowUsers jkoshita
 #
 # opkg update
 # opkg list-upgradable | cut -f 1 -d ' ' | xargs opkg upgrade
-# opkg install openssh-sftp-server vim luci-app-https-dns-proxy luci-app-adblock tcpdump luci-app-ddns curl bind-host
+# opkg install openssh-sftp-server vim luci-app-https-dns-proxy luci-app-adblock tcpdump luci-app-ddns bind-host
 # uci -q delete uhttpd.main.listen_http
 # uci -q delete uhttpd.main.listen_https
 # uci add_list uhttpd.main.listen_http="127.0.0.1:80"
