@@ -47,6 +47,11 @@ alias debian-1.lan_macos='ssh -i /home/jkoshita/.ssh/debian-1.lan -L 24000:local
 alias debian-2.lan='ssh -i /home/jkoshita/.ssh/debian-2.lan -L 14000:localhost:4000 jkoshita@windows-2.lan'
 alias macos.lan='ssh -i /home/jkoshita/.ssh/macos.lan -L 24000:localhost:4000 jkoshita@macos.lan'
 
+#
+# powershell aliases:
+# Set-Alias -Name linksys.lan -Value ssh -i /home/jkoshita/.ssh/linksys.lan -L 18080:localhost:80 root@linksys.lan
+#
+
 PS1='%K{blue}%n@debian%k %F{cyan}%1~%f $ '
 RPROMPT='%t'
 
