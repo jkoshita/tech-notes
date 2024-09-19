@@ -15,3 +15,9 @@ New-Alias -Name macos.lan -Value C:\Users\jkoshita\.ssh\login\macos.ps1
 
 New-Alias -Name raspberrypi.lan -Value C:\Users\jkoshita\.ssh\login\raspberrypi.ps1
 # ssh -i /Users/jkoshita/.ssh/raspberrypi.lan -L 5900:localhost:5900 jkoshita@raspberrypi.lan
+
+New-Alias -Name debian-vm-1.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm-1.ps1
+# ssh -i /Users/jkoshita/.ssh/debian-vm-1.lan -L 5901:localhost:5900 jkoshita@debian.lan
+
+New-Alias -Name debian-vm-2.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm-2.ps1
+# ssh -i /Users/jkoshita/.ssh/debian-vm-2.lan -L 5900:localhost:5900 jkoshita@<VAR>
