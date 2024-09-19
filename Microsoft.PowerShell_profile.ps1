@@ -20,5 +20,5 @@ New-Alias -Name debian-vm-1.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm-1.
 # ssh -i /Users/jkoshita/.ssh/debian-vm-1.lan -L 5901:localhost:5900 jkoshita@debian.lan
 
 New-Alias -Name debian-vm-2.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm-2.ps1
-# $ip_address = Get-VM -Name debian | Select-Object -ExpandProperty networkadapters | Select-Object -ExpandProperty ipaddresses | Select-Object -First 1
+# $ip_address = Start-Process pwsh.exe -Verb RunAs -WindowStyle Hidden | Get-VM -Name debian | Select-Object -ExpandProperty networkadapters | Select-Object -ExpandProperty ipaddresses | Select-Object -First 1
 # ssh -i /Users/jkoshita/.ssh/debian-vm-2.lan -L 5900:localhost:5900 jkoshita@${ip_address}
