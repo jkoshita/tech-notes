@@ -17,7 +17,7 @@ New-Alias -Name raspberrypi.lan -Value C:\Users\jkoshita\.ssh\login\raspberrypi.
 # ssh -i /Users/jkoshita/.ssh/raspberrypi.lan -L 5900:localhost:5900 jkoshita@raspberrypi.lan
 
 New-Alias -Name debian-vm-1.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm-1.ps1
-# ssh -i /Users/jkoshita/.ssh/debian-vm-1.lan -L 5901:localhost:5900 jkoshita@debian.lan
+# ssh -i /Users/jkoshita/.ssh/debian-vm-1.lan -L 5901:localhost:5901 jkoshita@debian.lan
 
 New-Alias -Name debian-vm-2.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm-2.ps1
 # param($IPAddress)
@@ -25,4 +25,4 @@ New-Alias -Name debian-vm-2.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm-2.
 #     Write-Host "`nRun As Administrator:`nGet-VM -Name debian | Select-Object -ExpandProperty networkadapters | Select-Object -ExpandProperty ipaddresses | Select-Object -First 1`n`ndebian-vm-2.lan -IPAddress <output>`n"
 #     exit
 # }
-# ssh -i /Users/jkoshita/.ssh/debian-vm-2.lan -L 5900:localhost:5900 jkoshita@${IPAddress}
+# ssh -i /Users/jkoshita/.ssh/debian-vm-2.lan -L 5901:localhost:5900 jkoshita@${IPAddress}
