@@ -1,7 +1,7 @@
 debian setup:
 
 sudo apt update && sudo apt upgrade
-sudo apt install vim zsh git menulibre yaru-theme-gtk yaru-theme-icon yaru-theme-sound fonts-noto mpv tigervnc-standalone-server dbus-x11
+sudo apt install vim zsh git menulibre yaru-theme-gtk yaru-theme-icon yaru-theme-sound fonts-noto mpv xrdp
 (add "contrib" and "deb http://deb.debian.org/debian bookworm-backports main" to /etc/apt/sources.list)
 sudo apt update
 sudo apt install torbrowser-launcher
