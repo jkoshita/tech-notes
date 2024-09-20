@@ -6,7 +6,7 @@ sudo apt install vim zsh git menulibre yaru-theme-gtk yaru-theme-icon yaru-theme
 sudo apt update
 sudo apt install torbrowser-launcher
 sudo apt install yt-dlp/bookworm-backports
-sudo apt purge libreoffice-common exfalso parole quodlibet xsane-common xterm cups-common system-config-printer-common && sudo apt autoremove --purge
+sudo apt purge libreoffice-common exfalso parole quodlibet xsane-common xterm cups-common system-config-printer-common xfce4-goodies && sudo apt autoremove --purge
 
 
 raspberrypi setup
