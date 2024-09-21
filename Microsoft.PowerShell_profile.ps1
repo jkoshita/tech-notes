@@ -19,6 +19,15 @@ New-Alias -Name raspberrypi.lan -Value C:\Users\jkoshita\.ssh\login\raspberrypi.
 New-Alias -Name proxmox.lan -Value C:\Users\jkoshita\.ssh\login\proxmox.ps1
 # ssh -i /Users/jkoshita/.ssh/proxmox.lan -L 8006:localhost:8006 root@proxmox.lan
 
+New-Alias -Name debian-fs.lan -Value C:\Users\jkoshita\.ssh\login\debian-fs.ps1
+# ssh -p 221 jkoshita@proxmox.lan
+
+New-Alias -Name debian-web.lan -Value C:\Users\jkoshita\.ssh\login\debian-web.ps1
+# ssh -p 222 jkoshita@proxmox.lan
+
+New-Alias -Name debian-db.lan -Value C:\Users\jkoshita\.ssh\login\debian-db.ps1
+# ssh -p 223 jkoshita@proxmox.lan
+
 New-Alias -Name debian-vm-1.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm-1.ps1
 # param($IPAddress)
 # if ($null -eq $IPAddress ) {
