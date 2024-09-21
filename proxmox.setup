@@ -38,7 +38,8 @@ dhcp-range=192.168.2.100,192.168.2.250,12h
 dhcp-option=vmbr0,3,192.168.2.1
 server=192.168.1.1
 dhcp-leasefile=/var/lib/misc/dnsmasq.leases
-dhcp-host=BC:24:11:87:66:25,debian-raid,192.168.2.100
+dhcp-host=BC:24:11:87:66:25,debian-fs,192.168.2.100
+dhcp-host=BC:24:11:87:66:25,debian-web,192.168.2.101
 
 systemctl restart networking
 systemctl restart dnsmasq
