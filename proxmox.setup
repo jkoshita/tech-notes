@@ -1,4 +1,4 @@
-apt install vim iproute2 wpasupplicant iw wireless-tools
+apt install vim iproute2 wpasupplicant
 
 wpa_passphrase <ssid> <password> >> /etc/wpa_supplicant/wpa_supplicant.conf
 
