@@ -1,4 +1,4 @@
-apt install vim iproute2 wpasupplicant
+apt install vim iproute2 wpasupplicant dnsmasq
 
 wpa_passphrase <ssid> <password> >> /etc/wpa_supplicant/wpa_supplicant.conf
 
