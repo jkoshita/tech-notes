@@ -1,10 +1,8 @@
-apt install iproute2 wpasupplicant iw wireless-tools
-
+apt install vim iproute2 wpasupplicant iw wireless-tools
 
 wpa_passphrase <ssid> <password> >> /etc/wpa_supplicant/wpa_supplicant.conf
 
-
-/etc/network/interfaces
+vi /etc/network/interfaces
 
 auto lo
 iface lo inet loopback
@@ -26,8 +24,7 @@ iface vmbr0 inet static
 
 source /etc/network/interfaces.d/*
 
-
-/etc/dnsmasq.conf
+vi /etc/dnsmasq.conf
 
 domain=proxmox.lan
 interface=vmbr0
@@ -36,7 +33,6 @@ dhcp-option=vmbr0,3,192.168.2.1
 server=192.168.1.1
 dhcp-leasefile=/var/lib/misc/dnsmasq.leases
 dhcp-host=BC:24:11:87:66:25,debian-raid,192.168.2.100
-
 
 systemctl restart networking
 systemctl restart dnsmasq
