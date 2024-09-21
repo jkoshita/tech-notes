@@ -19,11 +19,13 @@ iface vmbr0 inet static
         post-up echo 1 > /proc/sys/net/ipv4/ip_forward
         post-up iptables -t nat -A PREROUTING -p tcp --dport 2222 -j DNAT --to-destination 192.168.2.100:22
         post-up iptables -t nat -A PREROUTING -p tcp --dport 2223 -j DNAT --to-destination 192.168.2.101:22
+        post-up iptables -t nat -A PREROUTING -p tcp --dport 2224 -j DNAT --to-destination 192.168.2.102:22
         post-up iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.2.101:80
         post-up iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination 192.168.2.101:443
         post-up iptables -t nat -A POSTROUTING -s '192.168.2.0/24' -o wlx9cefd5fce9a9 -j MASQUERADE
         post-down iptables -t nat -D PREROUTING -p tcp --dport 2222 -j DNAT --to-destination 192.168.2.100:22
         post-down iptables -t nat -D PREROUTING -p tcp --dport 2223 -j DNAT --to-destination 192.168.2.101:22
+        post down iptables -t nat -D PREROUTING -p tcp --dport 2224 -j DNAT --to-destination 192.168.2.102:22
         post-down iptables -t nat -D PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.2.101:80
         post-down iptables -t nat -D PREROUTING -p tcp --dport 443 -j DNAT --to-destination 192.168.2.101:443
         post-down iptables -t nat -D POSTROUTING -s '192.168.2.0/24' -o wlx9cefd5fce9a9 -j MASQUERADE
@@ -40,6 +42,7 @@ server=192.168.1.1
 dhcp-leasefile=/var/lib/misc/dnsmasq.leases
 dhcp-host=BC:24:11:87:66:25,debian-fs,192.168.2.100
 dhcp-host=BC:24:11:3E:A6:45,debian-web,192.168.2.101
+dhcp-host=BC:24:11:7B:25:6C,debian-db,192.168.2.102
 
 systemctl restart networking
 systemctl restart dnsmasq
