@@ -1,0 +1,42 @@
+apt install iproute2 wpasupplicant iw wireless-tools
+
+
+wpa_passphrase <ssid> <password> >> /etc/wpa_supplicant/wpa_supplicant.conf
+
+
+/etc/network/interfaces
+
+auto lo
+iface lo inet loopback
+
+auto wlx9cefd5fce9a9
+iface wlx9cefd5fce9a9 inet dhcp
+
+auto vmbr0
+iface vmbr0 inet static
+        address 192.168.2.1/24
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+        post-up echo 1 > /proc/sys/net/ipv4/ip_forward
+        post-up iptables -t nat -A PREROUTING -p tcp --dport 2222 -j DNAT --to-destination 192.168.2.100:22
+        post-up iptables -t nat -A POSTROUTING -s '192.168.2.0/24' -o wlx9cefd5fce9a9 -j MASQUERADE
+        post-down iptables -t nat -D PREROUTING -p tcp --dport 2222 -j DNAT --to-destination 192.168.2.100:22
+        post-down iptables -t nat -D POSTROUTING -s '192.168.2.0/24' -o wlx9cefd5fce9a9 -j MASQUERADE
+
+source /etc/network/interfaces.d/*
+
+
+/etc/dnsmasq.conf
+
+domain=proxmox.lan
+interface=vmbr0
+dhcp-range=192.168.2.100,192.168.2.250,12h
+dhcp-option=vmbr0,3,192.168.2.1
+server=192.168.1.1
+dhcp-leasefile=/var/lib/misc/dnsmasq.leases
+dhcp-host=BC:24:11:87:66:25,debian-raid,192.168.2.100
+
+
+systemctl restart networking
+systemctl restart dnsmasq
