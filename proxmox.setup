@@ -20,15 +20,15 @@ iface vmbr0 inet static
         post-up iptables -t nat -A PREROUTING -p tcp --dport 221 -j DNAT --to-destination 192.168.2.100:22
         post-up iptables -t nat -A PREROUTING -p tcp --dport 222 -j DNAT --to-destination 192.168.2.101:22
         post-up iptables -t nat -A PREROUTING -p tcp --dport 223 -j DNAT --to-destination 192.168.2.102:22
-        post-up iptables -t nat -A PREROUTING -p tcp --dport 801 -j DNAT --to-destination 192.168.2.101:80
-        post-up iptables -t nat -A PREROUTING -p tcp --dport 4431 -j DNAT --to-destination 192.168.2.101:443
+        post-up iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.2.101:80
+        post-up iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination 192.168.2.101:443
         post-up iptables -t nat -A POSTROUTING -s '192.168.2.0/24' -o wlx9cefd5fce9a9 -j MASQUERADE
         post-down echo 0 > /proc/sys/net/ipv4/ip_forward
         post-down iptables -t nat -D PREROUTING -p tcp --dport 221 -j DNAT --to-destination 192.168.2.100:22
         post-down iptables -t nat -D PREROUTING -p tcp --dport 222 -j DNAT --to-destination 192.168.2.101:22
         post down iptables -t nat -D PREROUTING -p tcp --dport 223 -j DNAT --to-destination 192.168.2.102:22
-        post-down iptables -t nat -D PREROUTING -p tcp --dport 801 -j DNAT --to-destination 192.168.2.101:80
-        post-down iptables -t nat -D PREROUTING -p tcp --dport 4431 -j DNAT --to-destination 192.168.2.101:443
+        post-down iptables -t nat -D PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.2.101:80
+        post-down iptables -t nat -D PREROUTING -p tcp --dport 443 -j DNAT --to-destination 192.168.2.101:443
         post-down iptables -t nat -D POSTROUTING -s '192.168.2.0/24' -o wlx9cefd5fce9a9 -j MASQUERADE
 
 source /etc/network/interfaces.d/*
