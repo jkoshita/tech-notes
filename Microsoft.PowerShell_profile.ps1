@@ -28,7 +28,7 @@ New-Alias -Name debian-web.lan -Value C:\Users\jkoshita\.ssh\login\debian-web.ps
 New-Alias -Name debian-db.lan -Value C:\Users\jkoshita\.ssh\login\debian-db.ps1
 # ssh -p 223 -i /Users/jkoshita/.ssh/debian-db.lan jkoshita@debian-db.lan
 
-New-Alias -Name debian-vm-1.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm-1.ps1
+New-Alias -Name debian-vm.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm.ps1
 # param($IPAddress)
 # if ($null -eq $IPAddress ) {
 #     Write-Host "`nRun As Administrator:`nGet-VM -Name debian | Select-Object -ExpandProperty networkadapters | Select-Object -ExpandProperty ipaddresses | Select-Object -First 1`n`ndebian-vm-1.lan -IPAddress <output>`n"
@@ -36,7 +36,7 @@ New-Alias -Name debian-vm-1.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm-1.
 # }
 # ssh -i /Users/jkoshita/.ssh/debian-vm-1.lan -L 5901:localhost:5901 jkoshita@${IPAddress}
 
-New-Alias -Name debian-vm-2.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm-2.ps1
+New-Alias -Name debian-vm.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm.ps1
 # param($IPAddress)
 # if ($null -eq $IPAddress ) {
 #     Write-Host "`nRun As Administrator:`nGet-VM -Name debian | Select-Object -ExpandProperty networkadapters | Select-Object -ExpandProperty ipaddresses | Select-Object -First 1`n`ndebian-vm-2.lan -IPAddress <output>`n"
