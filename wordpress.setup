@@ -1,7 +1,7 @@
 web:
 apt install snapd php php-mysql php-curl php-xml php-mbstring php-igbinary php-imagick php-intl php-zip 
 php-acpu php-memcached php-redis 
-
+systemctl restart apache2
 
 database:
 apt install mariadb-server
@@ -25,3 +25,11 @@ openssl verify -CAfile cacert.pem server-cert.pem
 cp cacert.pem /etc/mysql
 cp server-cert.pem /etc/mysql
 cp server-key.pem /etc/mysql
+chmod 666 /etc/mysql/server-key.pem
+openssl genrsa 2048 > ca-key.pem
+openssl req -new -x509 -nodes -days 365000 -key ca-key.pem -out cacert.pem  # !!! FQDN: debian-db.lan-ca
+openssl req -newkey rsa:2048 -days 365000 -nodes -keyout client-key.pem -out client-req.pem  # !!! FQDN: debian-db.lan-pk
+openssl rsa -in client-key.pem -out client-key.pem
+openssl x509 -req -in client-req.pem -days 365000 -CA cacert.pem -CAkey ca-key.pem -set_serial 01 -out client-cert.pem
+openssl verify -CAfile cacert.pem client-cert.pem
+systemctl restart mysql
