@@ -1,1 +1,2 @@
-apt install snapd php php-mysql php-curl php-xml php-mbstring php-igbinary php-imagick php-intl
+apt install snapd php php-mysql php-curl php-xml php-mbstring php-igbinary php-imagick php-intl php-zip 
+php-acpu php-memcached php-redis 
