@@ -10,3 +10,9 @@ mariadb
 INSTALL SONAME 'auth_ed25519';
 GRANT ALL ON *.* TO 'jkoshita'@'192.168.1.100' IDENTIFIED VIA ed25519 USING PASSWORD('') WITH GRANT OPTION;
 FLUSH PRIVILEGES;
+vi /etc/mysql/mariadb.conf.d/50-server.cnf
+- bind-address = 127.0.0.1
++ ssl-ca = /etc/mysql/cacert.pem
++ ssl-cert = /etc/mysql/server-cert.pem
++ ssl-key = /etc/mysql/server-key.pem
++ require-secure-transport = on
