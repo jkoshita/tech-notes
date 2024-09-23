@@ -1,0 +1,15 @@
+nomachine setup
+
+wsl:
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/nm-windows-2.lan -N ""
+cat ~/.ssh/nm-windows-2.lan.pub > /mnt/c/Users/jkoshita/.nx/config/authorized.crt
+chmod 644 /mnt/c/Users/jkoshita/.nx/config/authorized.crt
+
+macos:
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/nm-macos.lan -N ""
+cat ~/.ssh/nm-macos.lan.pub > ~/.nx/config/authorized.crt
+chmod 600 ~/.nx/config/authorized.crt
+
+windows: /mnt/c/Program\ Files/NoMachine/etc/server.cfg
+macos: /Applications/NoMachine.app/Contents/Frameworks/etc/server.cfg
++ AcceptedAuthenticationMethods NX-private-key
