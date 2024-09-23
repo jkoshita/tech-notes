@@ -26,16 +26,4 @@ cp cacert.pem /etc/mysql
 cp server-cert.pem /etc/mysql
 cp server-key.pem /etc/mysql
 chmod 666 /etc/mysql/server-key.pem
-openssl genrsa 2048 > ca-key.pem
-openssl req -new -x509 -nodes -days 365000 -key ca-key.pem -out cacert.pem  # !!! FQDN: client-ca
-openssl req -newkey rsa:2048 -days 365000 -nodes -keyout client-key.pem -out client-req.pem  # !!! FQDN: client-pk
-openssl rsa -in client-key.pem -out client-key.pem
-openssl x509 -req -in client-req.pem -days 365000 -CA cacert.pem -CAkey ca-key.pem -set_serial 01 -out client-cert.pem
-openssl verify -CAfile cacert.pem client-cert.pem
-openssl genrsa 2048 > ca-key.pem
-openssl req -new -x509 -nodes -days 365000 -key ca-key.pem -out cacert.pem  # !!! FQDN: wp-ca
-openssl req -newkey rsa:2048 -days 365000 -nodes -keyout wp-key.pem -out wp-req.pem  # !!! FQDN: wp-pk
-openssl rsa -in wp-key.pem -out wp-key.pem
-openssl x509 -req -in wp-req.pem -days 365000 -CA cacert.pem -CAkey ca-key.pem -set_serial 01 -out wp-cert.pem
-openssl verify -CAfile cacert.pem wp-cert.pem
 systemctl restart mysql
