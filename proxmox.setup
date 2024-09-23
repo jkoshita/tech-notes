@@ -1,51 +1,14 @@
-apt install vim iproute2 wpasupplicant dnsmasq
-
-wpa_passphrase <ssid> <password> >> /etc/wpa_supplicant/wpa_supplicant.conf
-
-vi /etc/network/interfaces
-
 auto lo
 iface lo inet loopback
 
-auto wlx9cefd5fce9a9
-iface wlx9cefd5fce9a9 inet dhcp
+iface enp5s0 inet manual
 
 auto vmbr0
 iface vmbr0 inet static
-        address 192.168.2.1/24
-        bridge-ports none
+        address 192.168.1.101/24
+        address 192.168.1.1/24
+        bridge-ports enp5s0
         bridge-stp off
         bridge-fd 0
-        post-up echo 1 > /proc/sys/net/ipv4/ip_forward
-        post-up iptables -t nat -A PREROUTING -p tcp --dport 221 -j DNAT --to-destination 192.168.2.100:22
-        post-up iptables -t nat -A PREROUTING -p tcp --dport 222 -j DNAT --to-destination 192.168.2.101:22
-        post-up iptables -t nat -A PREROUTING -p tcp --dport 223 -j DNAT --to-destination 192.168.2.102:22
-        post-up iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.2.101:80
-        post-up iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination 192.168.2.101:443
-        post-up iptables -t nat -A PREROUTING -p tcp --dport 3306 -j DNAT --to-destination 192.168.2.102:3306
-        post-up iptables -t nat -A POSTROUTING -s '192.168.2.0/24' -o wlx9cefd5fce9a9 -j MASQUERADE
-        post-down echo 0 > /proc/sys/net/ipv4/ip_forward
-        post-down iptables -t nat -D PREROUTING -p tcp --dport 221 -j DNAT --to-destination 192.168.2.100:22
-        post-down iptables -t nat -D PREROUTING -p tcp --dport 222 -j DNAT --to-destination 192.168.2.101:22
-        post down iptables -t nat -D PREROUTING -p tcp --dport 223 -j DNAT --to-destination 192.168.2.102:22
-        post-down iptables -t nat -D PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.2.101:80
-        post-down iptables -t nat -D PREROUTING -p tcp --dport 443 -j DNAT --to-destination 192.168.2.101:443
-        post-down iptables -t nat -D PREROUTING -p tcp --dport 3306 -j DNAT --to-destination 192.168.2.102:3306
-        post-down iptables -t nat -D POSTROUTING -s '192.168.2.0/24' -o wlx9cefd5fce9a9 -j MASQUERADE
 
 source /etc/network/interfaces.d/*
-
-vi /etc/dnsmasq.conf
-
-domain=proxmox.lan
-interface=vmbr0
-dhcp-range=192.168.2.100,192.168.2.250,12h
-dhcp-option=vmbr0,3,192.168.2.1
-server=192.168.1.1
-dhcp-leasefile=/var/lib/misc/dnsmasq.leases
-dhcp-host=BC:24:11:87:66:25,debian-fs,192.168.2.100
-dhcp-host=BC:24:11:3E:A6:45,debian-web,192.168.2.101
-dhcp-host=BC:24:11:7B:25:6C,debian-db,192.168.2.102
-
-systemctl restart networking
-systemctl restart dnsmasq
