@@ -1,6 +1,5 @@
 web:
-apt install snapd php php-mysql php-curl php-xml php-mbstring php-igbinary php-imagick php-intl php-zip 
-php-acpu php-memcached php-redis 
+apt install snapd php php-mysql php-curl php-xml php-mbstring php-igbinary php-imagick php-intl php-zip php-apcu php-memcached php-redis 
 systemctl restart apache2
 
 database:
