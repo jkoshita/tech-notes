@@ -8,5 +8,5 @@ apt install mariadb-server
 mysql_secure_installation
 mariadb
 INSTALL SONAME 'auth_ed25519';
-GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+GRANT ALL ON *.* TO 'jkoshita'@'192.168.1.100' IDENTIFIED VIA ed25519 USING PASSWORD('') WITH GRANT OPTION;
 FLUSH PRIVILEGES;
