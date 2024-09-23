@@ -23,4 +23,4 @@ openssl rsa -in server-key.pem -out server-key.pem
 openssl x509 -req -in server-req.pem -days 365000 -CA cacert.pem -CAkey ca-key.pem -set_serial 01 -out server-cert.pem
 cp server-cert.pem /etc/mysql
 cp server-key.pem /etc/mysql
-sudo cp cacert.pem /etc/mysql
+cp cacert.pem /etc/mysql
