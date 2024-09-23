@@ -21,6 +21,7 @@ openssl req -new -x509 -nodes -days 365000 -key ca-key.pem -out cacert.pem  # !!
 openssl req -newkey rsa:2048 -days 365000 -nodes -keyout server-key.pem -out server-req.pem  # !!! FQDN: debian-db.lan-pk
 openssl rsa -in server-key.pem -out server-key.pem
 openssl x509 -req -in server-req.pem -days 365000 -CA cacert.pem -CAkey ca-key.pem -set_serial 01 -out server-cert.pem
+openssl verify -CAfile cacert.pem server-cert.pem
 cp server-cert.pem /etc/mysql
 cp server-key.pem /etc/mysql
 cp cacert.pem /etc/mysql
