@@ -1,2 +1,11 @@
+web:
 apt install snapd php php-mysql php-curl php-xml php-mbstring php-igbinary php-imagick php-intl php-zip 
 php-acpu php-memcached php-redis 
+
+
+database:
+apt install mariadb-server
+mysql_secure_installation
+mariadb
+GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
