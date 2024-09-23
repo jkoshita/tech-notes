@@ -13,19 +13,16 @@ uci commit uhttpd
 debian setup:
 
 sudo apt update && sudo apt upgrade
-sudo apt install vim zsh git menulibre yaru-theme-gtk yaru-theme-icon yaru-theme-sound fonts-noto mpv xrdp
+sudo apt install vim zsh git yaru-theme-gtk yaru-theme-icon yaru-theme-sound fonts-noto mpv xrdp gocryptfs fuse
 (add "contrib" and "deb http://deb.debian.org/debian bookworm-backports main" to /etc/apt/sources.list)
 sudo apt update
-sudo apt install torbrowser-launcher
-sudo apt install yt-dlp/bookworm-backports
-sudo apt purge mousepad libreoffice-common exfalso parole quodlibet xsane-common xterm cups-common system-config-printer-common xfce4-goodies && sudo apt autoremove --purge
+sudo apt install torbrowser-launcher yt-dlp/bookworm-backports
 
 
 raspberrypi setup
 
 sudo apt update && sudo apt upgrade
 sudo apt install vim zsh git wireshark
-sudo apt purge geany-common thonny chromium-common firefox vlc-data eom-common galculator evince-common mousepad rpi-imager lxtask && sudo apt autoremove --purge
 
 
 hyper-v setup
