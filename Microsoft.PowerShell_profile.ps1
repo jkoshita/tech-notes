@@ -11,7 +11,7 @@ New-Alias -Name windows-2.lan -Value C:\Users\jkoshita\.ssh\login\windows-2.ps1
 # ssh -i /Users/jkoshita/.ssh/windows-2.lan -L 14000:localhost:4000 jkoshita@windows-2.lan
 
 New-Alias -Name macos.lan -Value C:\Users\jkoshita\.ssh\login\macos.ps1
-# ssh -i /Users/jkoshita/.ssh/macos.lan -L 24000:localhost:4000 jkoshita@macos.lan
+# ssh -i /Users/jkoshita/.ssh/macos.lan -L 4000:localhost:4000 jkoshita@macos.lan
 
 New-Alias -Name raspberrypi.lan -Value C:\Users\jkoshita\.ssh\login\raspberrypi.ps1
 # ssh -i /Users/jkoshita/.ssh/raspberrypi.lan -L 5900:localhost:5900 jkoshita@raspberrypi.lan
