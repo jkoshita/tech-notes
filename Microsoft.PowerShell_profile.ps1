@@ -28,10 +28,5 @@ New-Alias -Name debian-web.lan -Value C:\Users\jkoshita\.ssh\login\debian-web.ps
 New-Alias -Name debian-db.lan -Value C:\Users\jkoshita\.ssh\login\debian-db.ps1
 # ssh -i /Users/jkoshita/.ssh/debian-db.lan jkoshita@debian-db.lan
 
-New-Alias -Name debian-vm.lan -Value C:\Users\jkoshita\.ssh\login\debian-vm.ps1
-# param($IPAddress)
-# if ($null -eq $IPAddress ) {
-#     Write-Host "`nRun As Administrator:`nGet-VM -Name debian | Select-Object -ExpandProperty networkadapters | Select-Object -ExpandProperty ipaddresses | Select-Object -First 1`n`ndebian-vm.lan -IPAddress <output>`n"
-#     exit
-# }
-# ssh -i /Users/jkoshita/.ssh/debian-vm.lan -L 5901:localhost:5901 jkoshita@${IPAddress}
+New-Alias -Name debian-vm -Value C:\Users\jkoshita\.ssh\login\debian-vm.ps1
+# ssh -i /Users/jkoshita/.ssh/debian-vm jkoshita@debian-vm
