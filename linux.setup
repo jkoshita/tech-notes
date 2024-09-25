@@ -13,7 +13,7 @@ uci commit uhttpd
 debian setup:
 
 sudo apt update && sudo apt upgrade
-sudo apt install vim zsh git yaru-theme-gtk yaru-theme-icon yaru-theme-sound fonts-noto mpv xrdp gocryptfs fuse
+sudo apt install vim zsh git yaru-theme-gtk yaru-theme-icon yaru-theme-sound fonts-noto xrdp gocryptfs fuse
 (add "contrib" and "deb http://deb.debian.org/debian bookworm-backports main" to /etc/apt/sources.list)
 sudo apt update
 sudo apt install torbrowser-launcher yt-dlp/bookworm-backports
