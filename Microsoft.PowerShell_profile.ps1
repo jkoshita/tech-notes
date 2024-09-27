@@ -17,7 +17,7 @@ New-Alias -Name raspberrypi.lan -Value C:\Users\jkoshita\.ssh\login\raspberrypi.
 # ssh -i /Users/jkoshita/.ssh/raspberrypi.lan -L 5900:localhost:5900 jkoshita@raspberrypi.lan
 
 New-Alias -Name proxmox.lan -Value C:\Users\jkoshita\.ssh\login\proxmox.ps1
-# ssh -i /Users/jkoshita/.ssh/proxmox.lan -L 8006:localhost:8006 root@192.168.1.151
+# ssh -i /Users/jkoshita/.ssh/proxmox.lan root@192.168.1.151
 
 New-Alias -Name debian-fs.lan -Value C:\Users\jkoshita\.ssh\login\debian-fs.ps1
 # ssh -i /Users/jkoshita/.ssh/debian-fs.lan jkoshita@debian-fs.lan
