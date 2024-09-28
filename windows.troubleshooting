@@ -1,3 +1,5 @@
+Shfit-F10 + OOBE\BYPASSNRO
+
 Repair-WindowsImage -Online -CheckHealth
 Repair-WindowsImage -Online -RestoreHealth
 Repair-WindowsImage -Online -RestoreHealth -Source "I:\sources\install.wim:1" -LimitAccess
