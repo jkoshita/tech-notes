@@ -3,3 +3,11 @@ Shift-F10 + OOBE\BYPASSNRO
 Repair-WindowsImage -Online -CheckHealth
 Repair-WindowsImage -Online -RestoreHealth
 Repair-WindowsImage -Online -RestoreHealth -Source "I:\sources\install.wim:1" -LimitAccess
+
+ad-ds setup order:
+1 - install windows server
+2 - set ethernet and computer name
+3 - install and setup dns server
+4 - install and setup ad-ds
+5 - install and setup dhcp server
+6 - install and setup nat
