@@ -1,4 +1,4 @@
-Shfit-F10 + OOBE\BYPASSNRO
+Shift-F10 + OOBE\BYPASSNRO
 
 Repair-WindowsImage -Online -CheckHealth
 Repair-WindowsImage -Online -RestoreHealth
