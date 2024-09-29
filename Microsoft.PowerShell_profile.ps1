@@ -22,12 +22,6 @@ New-Alias -Name proxmox.lan -Value C:\Users\jkoshita\.ssh\login\proxmox.ps1
 New-Alias -Name debian-fs.lan -Value C:\Users\jkoshita\.ssh\login\debian-fs.ps1
 # ssh -i /Users/jkoshita/.ssh/debian-fs.lan jkoshita@debian-fs.lan
 
-New-Alias -Name debian-web.lan -Value C:\Users\jkoshita\.ssh\login\debian-web.ps1
-# ssh -i /Users/jkoshita/.ssh/debian-web.lan jkoshita@debian-web.lan
-
-New-Alias -Name debian-db.lan -Value C:\Users\jkoshita\.ssh\login\debian-db.ps1
-# ssh -i /Users/jkoshita/.ssh/debian-db.lan jkoshita@debian-db.lan
-
 New-Alias -Name windows-server.lan -Value C:\Users\jkoshita\.ssh\login\windows-server.ps1
 # ssh -i /Users/jkoshita/.ssh/windows-server.lan Administrator@windows-server.lan
 
