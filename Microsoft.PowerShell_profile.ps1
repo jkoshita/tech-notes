@@ -24,6 +24,3 @@ New-Alias -Name debian-fs.lan -Value C:\Users\jkoshita\.ssh\login\debian-fs.ps1
 
 New-Alias -Name windows-server.lan -Value C:\Users\jkoshita\.ssh\login\windows-server.ps1
 # ssh -i /Users/jkoshita/.ssh/windows-server.lan Administrator@windows-server.lan
-
-New-Alias -Name debian-vm -Value C:\Users\jkoshita\.ssh\login\debian-vm.ps1
-# ssh -i /Users/jkoshita/.ssh/debian-vm jkoshita@debian-vm
