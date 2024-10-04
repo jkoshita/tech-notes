@@ -13,9 +13,6 @@ New-Alias -Name windows-2.lan -Value C:\Users\jkoshita\.ssh\login\windows-2.ps1
 New-Alias -Name macos.lan -Value C:\Users\jkoshita\.ssh\login\macos.ps1
 # ssh -i /Users/jkoshita/.ssh/macos.lan -L 40002:localhost:4000 jkoshita@macos.lan
 
-New-Alias -Name raspberrypi.lan -Value C:\Users\jkoshita\.ssh\login\raspberrypi.ps1
-# ssh -i /Users/jkoshita/.ssh/raspberrypi.lan -L 5900:localhost:5900 jkoshita@raspberrypi.lan
-
 New-Alias -Name proxmox.lan -Value C:\Users\jkoshita\.ssh\login\proxmox.ps1
 # ssh -i /Users/jkoshita/.ssh/proxmox.lan root@192.168.1.151
 
@@ -24,3 +21,6 @@ New-Alias -Name debian-fs.lan -Value C:\Users\jkoshita\.ssh\login\debian-fs.ps1
 
 New-Alias -Name windows-server.lan -Value C:\Users\jkoshita\.ssh\login\windows-server.ps1
 # ssh -i /Users/jkoshita/.ssh/windows-server.lan Administrator@windows-server.lan
+
+New-Alias -Name raspberrypi.lan -Value C:\Users\jkoshita\.ssh\login\raspberrypi.ps1
+# ssh -i /Users/jkoshita/.ssh/raspberrypi.lan -L 5900:localhost:5900 jkoshita@raspberrypi.lan
