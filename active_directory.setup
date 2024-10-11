@@ -12,7 +12,7 @@ realm list
 #
 # /etc/sssd/sssd.conf
 # + [sssd]
-# - services =
+# - services = nss, pam
 # + default_domain_suffix = oshita.com
 # + implicit_pac_responder = false
 #
