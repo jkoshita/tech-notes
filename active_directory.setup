@@ -52,6 +52,7 @@ pam-auth-update
 
 #
 # /usr/lib/systemd/user/gvfs-daemon.service
+# + [Service]
 # + Environment="KRB5CCNAME=FILE:/tmp/.krb5cc_%U"
 #
 
