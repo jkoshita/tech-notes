@@ -1,1 +1,1 @@
-apt install realmd sssd sssd-tools libsss-sudo samba krb5-user adcli libsasl2-modules-ldap packagekit libpam-mount
+apt install realmd sssd sssd-tools libsss-sudo adcli samba packagekit krb5-user libpam-mount libsasl2-modules-ldap
