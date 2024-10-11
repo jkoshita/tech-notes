@@ -49,3 +49,33 @@ pam-auth-update
 # encrypt passwords = yes
 # client protection = encrypt
 #
+
+#
+# /usr/lib/systemd/user/gvfs-daemon.service
+# + Environment="KRB5CCNAME=FILE:/tmp/.krb5cc_%U"
+#
+
+#
+# /etc/security/pam_mount.conf.xml
+# + <?xml version="1.0" encoding="utf-8" ?>
+# + <!DOCTYPE pam_mount SYSTEM "pam_mount.conf.xml.dtd">
+# + <pam_mount>
+# + <debug enable="0" />
+# + <!--
+# + <luserconf name=".pam_mount.conf.xml" />
+# + -->
+# + <mntoptions deny="suid,dev,exec" />
+# + <mntoptions allow="*" />
+# + <mntoptions require="nosuid,nodev,noexec" />
+# + <logout wait="0" hup="no" term="no" kill="no" />
+# + <volume
+# + fstype="cifs"
+# + sgrp="domain users"
+# + server="myserver.mydomain.local"
+# + path="share"
+# + mountpoint="~/Network Drives/Share"
+# + options="vers=3.0,sec=krb5i,cruid=%(USERUID),nodev,nosuid,noexec,rw"
+# + />
+# + <mkmountpoint enable="1" remove="true" />
+# + </pam_mount>
+#
