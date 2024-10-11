@@ -1,1 +1,51 @@
 apt install realmd sssd sssd-tools libsss-sudo adcli samba packagekit krb5-user libpam-mount libsasl2-modules-ldap
+
+#
+# /etc/krb5.conf
+# + [libdefaults]
+# + default_realm = OSHITA.COM
+#
+
+realm join --user=jkoshita OSHITA.COM
+realm list
+
+#
+# /etc/sssd/sssd.conf
+# + [sssd]
+# - services =
+# + default_domain_suffix = oshita.com
+# + implicit_pac_responder = false
+#
+# [domain/oshita.com]
+# + default_shell = /bin/zsh
+# + krb5_ccachedir = /tmp
+# + krb5_ccname_template = FILE:%d/.krb5cc_%U
+# + override_homedir = /home/%u@%d
+# 
+
+pam-auth-update
+
+#
+# (*) SSS authentication
+# (*) Mount volumes for user
+# (*) Create home directory on login
+#
+
+#
+# /etc/pam.d/common-session
+# + session optional pam_mkhomedir.so umask=0077
+#
+
+#
+# /etc/sudoers.d/oshita
+# + %domain\ admins@oshita.com ALL=(ALL:ALL) ALL
+#
+
+#
+# /etc/samba/smb.conf
+# [global]
+# workgroup = OSHITA
+# realm = OSHITA.COM
+# encrypt passwords = yes
+# client protection = encrypt
+#
