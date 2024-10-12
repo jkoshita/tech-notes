@@ -1,3 +1,4 @@
+apt install vim zsh git
 apt install sssd-tools realmd adcli smbclient krb5-user
 
 realm discover oshita.com
