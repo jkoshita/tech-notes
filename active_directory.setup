@@ -1,4 +1,4 @@
-apt install sssd-ad sssd-tools realmd adcli samba-common-bin krb5-user
+apt install sssd-tools realmd adcli smbclient krb5-user
 
 realm discover oshita.com
 realm join -U jkoshita oshita.com
