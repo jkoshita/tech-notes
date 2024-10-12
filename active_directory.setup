@@ -5,6 +5,11 @@ realm join -U jkoshita oshita.com
 pam-auth-update --enable mkhomedir
 
 #
+# /etc/sssd/sssd.conf
+# + default_shell = /bin/zsh
+#
+
+#
 # /etc/sudoers.d/oshita
-# %domain\ admins@oshita.com ALL=(ALL:ALL) ALL
+# + %domain\ admins@oshita.com ALL=(ALL:ALL) ALL
 #
