@@ -72,9 +72,9 @@ pam-auth-update
 # + <volume
 # + fstype="cifs"
 # + sgrp="domain users"
-# + server="myserver.mydomain.local"
-# + path="share"
-# + mountpoint="~/Network Drives/Share"
+# + server="windows-server.oshita.com"
+# + path="software"
+# + mountpoint="~/mnt/software"
 # + options="vers=3.0,sec=krb5i,cruid=%(USERUID),nodev,nosuid,noexec,rw"
 # + />
 # + <mkmountpoint enable="1" remove="true" />
