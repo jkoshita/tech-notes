@@ -1,82 +1,10 @@
-apt install sssd-ad sssd-tools realmd adcli samba-common-bin
+apt install sssd-ad sssd-tools realmd adcli samba-common-bin krb5-user
 
-#
-# /etc/krb5.conf
-# + [libdefaults]
-# + default_realm = OSHITA.COM
-#
-
-realm join --user=jkoshita OSHITA.COM
-realm list
-
-#
-# /etc/sssd/sssd.conf
-# + [sssd]
-# - services = nss, pam
-# + default_domain_suffix = oshita.com
-# + implicit_pac_responder = false
-#
-# [domain/oshita.com]
-# + default_shell = /bin/zsh
-# + krb5_ccachedir = /tmp
-# + krb5_ccname_template = FILE:%d/.krb5cc_%U
-# + override_homedir = /home/%u@%d
-# 
-
-pam-auth-update
-
-#
-# (*) SSS authentication
-# (*) Mount volumes for user
-# (*) Create home directory on login
-#
-
-#
-# /etc/pam.d/common-session
-# + session optional pam_mkhomedir.so umask=0077
-#
+realm discover oshita.com
+realm join -U jkoshita oshita.com
+pam-auth-update --enable mkhomedir
 
 #
 # /etc/sudoers.d/oshita
-# + %domain\ admins@oshita.com ALL=(ALL:ALL) ALL
-#
-
-#
-# /etc/samba/smb.conf
-# [global]
-# workgroup = OSHITA
-# realm = OSHITA.COM
-# encrypt passwords = yes
-# client protection = encrypt
-#
-
-#
-# /usr/lib/systemd/user/gvfs-daemon.service
-# + [Service]
-# + Environment="KRB5CCNAME=FILE:/tmp/.krb5cc_%U"
-#
-
-#
-# /etc/security/pam_mount.conf.xml
-# + <?xml version="1.0" encoding="utf-8" ?>
-# + <!DOCTYPE pam_mount SYSTEM "pam_mount.conf.xml.dtd">
-# + <pam_mount>
-# + <debug enable="0" />
-# + <!--
-# + <luserconf name=".pam_mount.conf.xml" />
-# + -->
-# + <mntoptions deny="suid,dev,exec" />
-# + <mntoptions allow="*" />
-# + <mntoptions require="nosuid,nodev,noexec" />
-# + <logout wait="0" hup="no" term="no" kill="no" />
-# + <volume
-# + fstype="cifs"
-# + sgrp="domain users"
-# + server="windows-server.oshita.com"
-# + path="software"
-# + mountpoint="~/mnt/software"
-# + options="vers=3.0,sec=krb5i,cruid=%(USERUID),nosuid,nodev,noexec,rw"
-# + />
-# + <mkmountpoint enable="1" remove="true" />
-# + </pam_mount>
+# %domain\ admins@oshita.com ALL=(ALL:ALL) ALL
 #
