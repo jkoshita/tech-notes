@@ -1,4 +1,4 @@
-apt install realmd sssd sssd-tools libsss-sudo adcli samba packagekit krb5-user libpam-mount libsasl2-modules-ldap
+apt install sssd-ad sssd-tools realmd adcli samba-common-bin
 
 #
 # /etc/krb5.conf
