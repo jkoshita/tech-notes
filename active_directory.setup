@@ -75,7 +75,7 @@ pam-auth-update
 # + server="windows-server.oshita.com"
 # + path="software"
 # + mountpoint="~/mnt/software"
-# + options="vers=3.0,sec=krb5i,cruid=%(USERUID),nodev,nosuid,noexec,rw"
+# + options="vers=3.0,sec=krb5i,cruid=%(USERUID),nosuid,nodev,noexec,rw"
 # + />
 # + <mkmountpoint enable="1" remove="true" />
 # + </pam_mount>
