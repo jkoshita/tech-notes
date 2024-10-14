@@ -16,4 +16,6 @@ fi
 if [ -d "/etc/firefox/policies" ]; then
 	cp ./policies.json /etc/firefox/policies
 	echo "copied './policies.json' to '/etc/firefox/policies' directory!"
+else
+	echo "'/etc/firefox/policies' directory does not exist! Please re-run 'install.zsh'!"
 fi
