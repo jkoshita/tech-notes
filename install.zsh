@@ -8,7 +8,7 @@ fi
 if [ ! -d "/etc/firefox" ]; then
 	mkdir /etc/firefox && mkdir /etc/firefox/policies
 	echo "created '/etc/firefox' directory!\ncreated '/etc/firefox/policies' directory!"
-elseif [ ! -d "/etc/firefox/policies" ]; then
+elif [ ! -d "/etc/firefox/policies" ]; then
 	mkdir /etc/firefox/policies
 	echo "created '/etc/firefox/policies' directory!"
 fi
