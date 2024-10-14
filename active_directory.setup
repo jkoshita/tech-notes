@@ -14,3 +14,8 @@ pam-auth-update --enable mkhomedir
 # /etc/sudoers.d/oshita
 # + %domain\ admins@oshita.com ALL=(ALL:ALL) ALL
 #
+
+#
+# create startup application entry
+# command: gio mount smb://windows-server.oshita.com/system
+#
