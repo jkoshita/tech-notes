@@ -15,4 +15,9 @@ pam-auth-update --enable mkhomedir
 # + %domain\ admins@oshita.com ALL=(ALL:ALL) ALL
 #
 
+#
+# /usr/lib/systemd/user/gvfs-daemon.service
+# + Environment="KRB5CCNAME=FILE:/tmp/.krb5cc_%U"
+#
+
 apt install libpam-mount
