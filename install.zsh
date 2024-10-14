@@ -15,5 +15,5 @@ fi
 
 if [ -d "/etc/firefox/policies" ]; then
 	cp ./policies.json /etc/firefox/policies
-	echo "installed './policies.json' to '/etc/firefox/policies' directory!"
+	echo "copied './policies.json' to '/etc/firefox/policies' directory!"
 fi
