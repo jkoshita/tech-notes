@@ -14,5 +14,3 @@ pam-auth-update --enable mkhomedir
 # /etc/sudoers.d/oshita
 # + %domain\ admins@oshita.com ALL=(ALL:ALL) ALL
 #
-
-apt install libpam-mount
