@@ -20,7 +20,7 @@ New-Alias -Name debian-fs.lan -Value C:\Users\jkoshita\.ssh\login\debian-fs.ps1
 # ssh -i /Users/jkoshita/.ssh/debian-fs.lan jkoshita@debian-fs.lan
 
 New-Alias -Name windows-server.lan -Value C:\Users\jkoshita\.ssh\login\windows-server.ps1
-# ssh -i /Users/jkoshita/.ssh/windows-server.lan Administrator@windows-server.lan
+# ssh -i /Users/jkoshita/.ssh/windows-server.lan administrator@windows-server.lan
 
 New-Alias -Name raspberrypi.lan -Value C:\Users\jkoshita\.ssh\login\raspberrypi.ps1
 # ssh -i /Users/jkoshita/.ssh/raspberrypi.lan -L 5900:localhost:5900 jkoshita@raspberrypi.lan
