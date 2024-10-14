@@ -1,9 +1,19 @@
 #!/bin/zsh
 
+if [ "$EUID" -ne 0 ]; then
+	echo "Please run as root!"
+	exit
+fi
+
 if [ ! -d "/etc/firefox" ]; then
 	mkdir /etc/firefox && mkdir /etc/firefox/policies
 	echo "created '/etc/firefox' directory!\ncreated '/etc/firefox/policies' directory!"
+elseif [ ! -d "/etc/firefox/policies" ]; then
+	mkdir /etc/firefox/policies
+	echo "created '/etc/firefox/policies' directory!"
 fi
 
-cp ./policies.json /etc/firefox/policies
-echo "installed './policies.json' to '/etc/firefox/policies' directory!"
+if [ -d "/etc/firefox/policies" ]; then
+	cp ./policies.json /etc/firefox/policies
+	echo "installed './policies.json' to '/etc/firefox/policies' directory!"
+fi
