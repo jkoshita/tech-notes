@@ -24,3 +24,9 @@ New-Alias -Name windows-server.lan -Value C:\Users\jkoshita\.ssh\login\windows-s
 
 New-Alias -Name raspberrypi.lan -Value C:\Users\jkoshita\.ssh\login\raspberrypi.ps1
 # ssh -i /Users/jkoshita/.ssh/raspberrypi.lan -L 5900:localhost:5900 jkoshita@raspberrypi.lan
+
+New-Alias -Name linksys-relay1.lan -Value C:\Users\jkoshita\.ssh\login\linksys-relay1.ps1
+# ssh -i /Users/jkoshita/.ssh/linksys.lan -L 8081:localhost:80 root@192.168.1.152
+
+New-Alias -Name linksys-relay2.lan -Value C:\Users\jkoshita\.ssh\login\linksys-relay2.ps1
+# ssh -i /Users/jkoshita/.ssh/linksys.lan -L 8082:localhost:80 root@192.168.1.153
